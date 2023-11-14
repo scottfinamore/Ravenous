@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 
 const Business = () => {
  const businessData = {
@@ -11,7 +11,8 @@ const Business = () => {
      category: 'Italian',
      rating: 4.5,
      review_count: 86
-    } 
+    }
+    
     
     return (
     <div className='business'>
@@ -33,5 +34,6 @@ const Business = () => {
     </div>
 
     )
+    }
 
 export default Business;
