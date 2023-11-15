@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import SearchBar from './Components/SearchBar';
+import BusinessList from './Components/BusinessList';
 
 function App() {
   return (
@@ -16,9 +18,13 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a>  
       </header>
+
+      <BusinessList />
+      <SearchBar />
     </div>
+
   );
 }
 
