@@ -37,6 +37,14 @@
   }
 }
 
-.component{
-  border: 1px solid blue;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  color: white;
+  background-color: rgb(210, 170, 78);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  font-weight: 600;
 }

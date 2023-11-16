@@ -1,0 +1,24 @@
+.searchBarStyles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./Resources/Images/herbs_and_spices_hd_food.jpg);
+    height: 400px;
+    flex-direction: column;
+}
+
+.searchBusiness {
+    flex-wrap: wrap;
+}
+
+.searchBusiness input {
+    flex: 1;
+    margin: 20px;
+}
+
+.searchBusiness button {
+    padding: 10px 20px;
+    background-color: rgb(210, 170, 78);
+    color: white;
+    flex: 0 0 100%;
+}
