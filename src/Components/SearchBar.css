@@ -8,7 +8,11 @@
 }
 
 .searchBusiness {
+    display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .searchBusiness input {
@@ -21,4 +25,5 @@
     background-color: rgb(210, 170, 78);
     color: white;
     flex: 0 0 100%;
+    max-width: 100px;
 }

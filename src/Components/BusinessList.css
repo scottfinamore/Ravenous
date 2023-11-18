@@ -1,0 +1,20 @@
+.businessListWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.businessList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    row-gap: 40px;
+    column-gap: 40px;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+.business{
+    width: 250px;
+}

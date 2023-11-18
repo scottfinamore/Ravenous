@@ -1,6 +1,40 @@
 .business{
     border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
-.businessImage{
+.businessImage img{
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}
 
+.businessName{
+    font-weight: 600;
+    text-align: left;
+}
+
+.businessInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.businessAddress{
+    text-align: left;
+    width: 48%;
+    line-height: .2rem
+}
+
+.businessDetails{
+    text-align: right;
+    width: 48%;
+    line-height: .2rem;
+}
+
+.businessCategory{
+    text-transform: uppercase;
+    color: rgb(210, 170, 78);
 }
