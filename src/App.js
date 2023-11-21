@@ -4,11 +4,10 @@ import SearchBar from "./Components/SearchBar";
 import BusinessList from "./Components/BusinessList";
 
 function App() {
-  return (
-    <div className="App">
-      const businesses = [
+  const businesses = [
     {
-      imgSource: "fakeimageplace.codecademy.com",
+      imgSource:
+        "https://t3.ftcdn.net/jpg/00/27/57/96/360_F_27579652_tM7V4fZBBw8RLmZo0Bi8WhtO2EosTRFD.jpg",
       name: "restaurant name1",
       address: "1 Florida Ave.",
       city: "Tampa",
@@ -18,7 +17,8 @@ function App() {
       review_count: 80,
     },
     {
-      imgSource: "fakeimageplace.codecademy.com",
+      imgSource:
+        "https://t3.ftcdn.net/jpg/00/27/57/96/360_F_27579652_tM7V4fZBBw8RLmZo0Bi8WhtO2EosTRFD.jpg",
       name: "restaurant name2",
       address: "2 Florida Ave.",
       city: "Tampa",
@@ -28,7 +28,8 @@ function App() {
       review_count: 80,
     },
     {
-      imgSource: "fakeimageplace.codecademy.com",
+      imgSource:
+        "https://t3.ftcdn.net/jpg/00/27/57/96/360_F_27579652_tM7V4fZBBw8RLmZo0Bi8WhtO2EosTRFD.jpg",
       name: "restaurant name3",
       address: "3 Florida Ave.",
       city: "Tampa",
@@ -38,7 +39,8 @@ function App() {
       review_count: 80,
     },
     {
-      imgSource: "fakeimageplace.codecademy.com",
+      imgSource:
+        "https://t3.ftcdn.net/jpg/00/27/57/96/360_F_27579652_tM7V4fZBBw8RLmZo0Bi8WhtO2EosTRFD.jpg",
       name: "restaurant name4",
       address: "4 Florida Ave.",
       city: "Tampa",
@@ -48,7 +50,8 @@ function App() {
       review_count: 80,
     },
     {
-      imgSource: "fakeimageplace.codecademy.com",
+      imgSource:
+        "https://t3.ftcdn.net/jpg/00/27/57/96/360_F_27579652_tM7V4fZBBw8RLmZo0Bi8WhtO2EosTRFD.jpg",
       name: "restaurant name5",
       address: "5 Florida Ave.",
       city: "Tampa",
@@ -58,7 +61,8 @@ function App() {
       review_count: 80,
     },
     {
-      imgSource: "fakeimageplace.codecademy.com",
+      imgSource:
+        "https://t3.ftcdn.net/jpg/00/27/57/96/360_F_27579652_tM7V4fZBBw8RLmZo0Bi8WhtO2EosTRFD.jpg",
       name: "restaurant name6",
       address: "6 Florida Ave.",
       city: "Tampa",
@@ -68,9 +72,11 @@ function App() {
       review_count: 80,
     },
   ];
+  return (
+    <div className="App">
       <header>ravenous</header>
       <SearchBar />
-      <BusinessList />
+      <BusinessList businesses={businesses} />
     </div>
   );
 }
