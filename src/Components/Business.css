@@ -1,10 +1,15 @@
 .business{
-    border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
     margin-bottom: 20px;
+    padding: 0;
+}
+
+.business *{
+    margin: 0;
+    padding: 0;
 }
 .businessImage img{
     height: 250px;
@@ -15,6 +20,7 @@
 .businessName{
     font-weight: 600;
     text-align: left;
+    margin: .4rem;
 }
 
 .businessInfo{
@@ -25,16 +31,20 @@
 .businessAddress{
     text-align: left;
     width: 48%;
-    line-height: .2rem
+    margin: .2rem;
 }
 
 .businessDetails{
     text-align: right;
     width: 48%;
-    line-height: .2rem;
+    margin: .2rem;
 }
 
 .businessCategory{
     text-transform: uppercase;
+    color: rgb(210, 170, 78);
+}
+
+.businessRating{
     color: rgb(210, 170, 78);
 }

@@ -18,14 +18,14 @@ const SearchBar = () => {
 
   return (
     <div className="searchBarStyles">
+      <div>
+        <ul>{newListItem}</ul>
+      </div>
       <form className="searchBusiness">
         <input type="search" placeholder="Search Businesses"></input>
         <input type="search" placeholder="Where?"></input>
         <button type="submit">Let's Go</button>
       </form>
-      <div>
-        <ul>{newListItem}</ul>
-      </div>
     </div>
   );
 };
