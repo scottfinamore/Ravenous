@@ -7,12 +7,37 @@
     flex-direction: column;
 }
 
+.searchBarStyles ul {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #fff;
+    padding: 0 2.58rem 0.33rem 2.58rem;
+    line-height: 1.13;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.83rem;
+    transition: color 0.25s;
+    list-style: none;
+    color: white;
+}
+
+.searchBarStyles li.selected {
+    color:rgb(210, 170, 78);
+}
+
 .searchBusiness {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     
+}
+
+.searchBarStyles li {
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+    font-weight: bold;
 }
 
 .searchBusiness input {

@@ -1,33 +1,76 @@
-import react from "react";
+import React, { useState } from "react";
 import BusinessList from "./BusinessList.js";
 import "./SearchBar.css";
 
+const searchBarOptions = {
+  "Best Match": "best_match",
+  "Highest Rating": "highest_rating",
+  "Review Count": "review_count",
+};
+
 const SearchBar = () => {
-  const searchBarOptions = {
-    "Best Match":
-      "https://api.yelp.com/v3/businesses/search?sort_by=best_match&limit=20",
-    Rating: "https://api.yelp.com/v3/businesses/search?sort_by=rating&limit=20",
-    // Sammus: this is removing the quotes from "Rating" when I save
-    "Review Count":
-      "https://api.yelp.com/v3/businesses/search?sort_by=review_count&limit=20",
+  const [searchTerm, setSearchTerm] = useState("");
+  const [location, setLocation] = useState("");
+  const [selectedSortOption, setSelectedSortOption] = useState("best_match");
+
+  const handleSortOptionClick = (newSortOption) => {
+    console.log("Clicked on:", newSortOption);
+    setSelectedSortOption(newSortOption);
   };
 
-  const newListItem = Object.keys(searchBarOptions).map((key) => (
-    <li key={key}>{searchBarOptions[key]}</li>
-  ));
+  const handleSearchTermChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const handleLocationChange = (e) => {
+    setLocation(e.target.value);
+  };
+
+  const newListItem = () => {
+    return Object.keys(searchBarOptions).map((sortByOption) => {
+      let sortByOptionValue = searchBarOptions[sortByOption];
+      const isSelected = sortByOptionValue === selectedSortOption;
+      return (
+        <li key={sortByOptionValue} className={isSelected ? "selected" : ""}>
+          <span onClick={() => handleSortOptionClick(sortByOptionValue)}>
+            {sortByOption}
+          </span>
+        </li>
+      );
+    });
+  };
+
+  const handleButtonClick = () => {
+    console.log(
+      `Searching Yelp with ${searchTerm}, ${location}, ${selectedSortOption}`
+    );
+  };
+
+  console.log("Selected Sort Option:", selectedSortOption);
 
   return (
     <div className="searchBarStyles">
       <div>
-        <ul>{newListItem}</ul>
+        <ul>{newListItem()}</ul>
       </div>
-      <form className="searchBusiness">
-        <input type="search" placeholder="Search Businesses"></input>
-        <input type="search" placeholder="Where?"></input>
-        <button type="submit">Let's Go</button>
-      </form>
+      <div className="searchBusiness">
+        <input
+          type="search"
+          placeholder="Search Businesses"
+          value={searchTerm}
+          onChange={handleSearchTermChange}
+        />
+        <input
+          type="search"
+          placeholder="Where?"
+          value={location}
+          onChange={handleLocationChange}
+        />
+        <button type="submit" onClick={handleButtonClick}>
+          Let's Go
+        </button>
+      </div>
     </div>
   );
 };
-// scotty, you were missing this export, you need to export components
 export default SearchBar;
