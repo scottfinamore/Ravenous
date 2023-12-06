@@ -9,7 +9,7 @@ const BusinessList = (props) => {
     <div className="businessListWrapper">
       <div className="businessList">
         {businesses.map((business, index) => (
-          <Business key={index} businessData={business} />
+          <Business key={business.id} businessData={business} />
         ))}
       </div>
     </div>
