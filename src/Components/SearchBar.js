@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import BusinessList from "./BusinessList.js";
 import "./SearchBar.css";
+import searchBusinesses from "../utils/yelpAPI";
 
 const searchBarOptions = {
   "Best Match": "best_match",
@@ -41,9 +42,14 @@ const SearchBar = () => {
   };
 
   const handleButtonClick = () => {
-    console.log(
-      `Searching Yelp with ${searchTerm}, ${location}, ${selectedSortOption}`
-    );
+    // console.log(
+    //   `Searching for ${searchTerm}, ${location}, ${selectedSortOption}`
+    // );
+    if (!searchTerm.length || !location.length) {
+      alert("add values to fields");
+      return;
+    }
+    searchBusinesses(searchTerm, location, selectedSortOption);
   };
 
   console.log("Selected Sort Option:", selectedSortOption);

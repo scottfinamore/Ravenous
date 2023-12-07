@@ -72,6 +72,7 @@ function App() {
       review_count: 80,
     },
   ];
+
   return (
     <div className="App">
       <header>ravenous</header>

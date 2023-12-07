@@ -1,9 +1,10 @@
 const apiKey =
-  'YP5Bqa0p0BEWalVzak0hZ9n9zVNjvYWS4KjfjCNQlVDKGRi1kcQ7s2fnDC6nXJn398PnmVVXE_XqmZH3ewOUAGDdaXPsnmsgc1-DXdj7GmBYTeDBARjISS20TAF5ZXYx';
-const apiUrl = '/api/businesses/search';
+  "YP5Bqa0p0BEWalVzak0hZ9n9zVNjvYWS4KjfjCNQlVDKGRi1kcQ7s2fnDC6nXJn398PnmVVXE_XqmZH3ewOUAGDdaXPsnmsgc1-DXdj7GmBYTeDBARjISS20TAF5ZXYx";
+const apiUrl = "/api/businesses/search";
 
 const searchBusinesses = async (searchTerms, location, sortBy) => {
-  const url = `${apiUrl}?term=${searchTerms}&location=${location}&sort_by=${sortBy}`;
+  const url = `https://cors-anywhere.herokuapp.com/${apiUrl}?term=${searchTerms}&location=${location}&sort_by=${sortBy}`;
+  // const url = `https://cors-anywhere.herokuapp.com/api.yelp.com/v3/businesses/search?term=pizza&location=Cleveland&sort_by=best_match`;
 
   try {
     const response = await fetch(url, {
