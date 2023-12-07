@@ -7,11 +7,11 @@ const BusinessList = (props) => {
 
   return (
     <div className="businessListWrapper">
-      <div className="businessList">
+      <ul className="businessList">
         {businesses.map((business, index) => (
           <Business key={business.id} businessData={business} />
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

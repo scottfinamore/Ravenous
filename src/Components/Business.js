@@ -5,7 +5,7 @@ const Business = (props) => {
   const { businessData } = props;
 
   return (
-    <div className="business">
+    <li className="business">
       <div className="businessImage">
         <img src={businessData.imgSource} alt={businessData.name} />
       </div>
@@ -24,7 +24,7 @@ const Business = (props) => {
           </p>
         </div>
       </div>
-    </div>
+    </li>
   );
 };
 
