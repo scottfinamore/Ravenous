@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import BusinessList from "./BusinessList.js";
 import "./SearchBar.css";
-import searchBusinesses from "../utils/yelpAPI";
 
 const searchBarOptions = {
   "Best Match": "best_match",
@@ -10,6 +9,7 @@ const searchBarOptions = {
 };
 
 const SearchBar = (props) => {
+  console.log("props", props);
   const { setBusinesses } = props;
   const [searchTerm, setSearchTerm] = useState("");
   const [location, setLocation] = useState("");
@@ -50,21 +50,10 @@ const SearchBar = (props) => {
       alert("add values to fields");
       return;
     }
-
-    try {
-      const businessesRendered = searchBusinesses(
-        searchTerm,
-        location,
-        selectedSortOption
-      );
-
-      setBusinesses(businessesRendered);
-    } catch (error) {
-      console.error("Error fetching businesses bro:", error);
-    }
+    // function handler goes here
   };
 
-  console.log("Selected Sort Option:", selectedSortOption);
+  // console.log("Selected Sort Option:", selectedSortOption);
 
   return (
     <div className="searchBarStyles">

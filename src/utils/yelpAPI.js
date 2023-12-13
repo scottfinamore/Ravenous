@@ -3,7 +3,7 @@ const apiKey =
 const apiUrl = "/api/businesses/search";
 
 const searchBusinesses = async (searchTerms, location, sortBy) => {
-  const url = `https://cors-anywhere.herokuapp.com/${apiUrl}?term=${searchTerms}&location=${location}&sort_by=${sortBy}`;
+  const url = `${apiUrl}?term=${searchTerms}&location=${location}&sort_by=${sortBy}`;
   // const url = `https://cors-anywhere.herokuapp.com/api.yelp.com/v3/businesses/search?term=pizza&location=Cleveland&sort_by=best_match`;
 
   try {
@@ -21,7 +21,7 @@ const searchBusinesses = async (searchTerms, location, sortBy) => {
     }
 
     const data = await response.json();
-
+    console.log("data", data);
     const businesses = data.businesses.map((business) => ({
       id: business.id,
       name: business.name,
