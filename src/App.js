@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import SearchBar from "./Components/SearchBar";
 import BusinessList from "./Components/BusinessList";
+import React, { useState } from "react";
 
 function App() {
   const businesses = [
@@ -73,10 +74,12 @@ function App() {
     },
   ];
 
+  const [busniesses, setBusinesses] = useState([]);
+
   return (
     <div className="App">
       <header>ravenous</header>
-      <SearchBar />
+      <SearchBar setBusinesses={setBusinesses} />
       <BusinessList businesses={businesses} />
     </div>
   );

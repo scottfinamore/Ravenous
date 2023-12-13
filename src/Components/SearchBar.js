@@ -9,7 +9,8 @@ const searchBarOptions = {
   "Review Count": "review_count",
 };
 
-const SearchBar = () => {
+const SearchBar = (props) => {
+  const { setBusinesses } = props;
   const [searchTerm, setSearchTerm] = useState("");
   const [location, setLocation] = useState("");
   const [selectedSortOption, setSelectedSortOption] = useState("best_match");
@@ -41,7 +42,7 @@ const SearchBar = () => {
     });
   };
 
-  const handleButtonClick = () => {
+  const handleButtonClick = async () => {
     // console.log(
     //   `Searching for ${searchTerm}, ${location}, ${selectedSortOption}`
     // );
@@ -49,7 +50,18 @@ const SearchBar = () => {
       alert("add values to fields");
       return;
     }
-    searchBusinesses(searchTerm, location, selectedSortOption);
+
+    try {
+      const businessesRendered = searchBusinesses(
+        searchTerm,
+        location,
+        selectedSortOption
+      );
+
+      setBusinesses(businessesRendered);
+    } catch (error) {
+      console.error("Error fetching businesses bro:", error);
+    }
   };
 
   console.log("Selected Sort Option:", selectedSortOption);
