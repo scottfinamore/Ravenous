@@ -1,6 +1,6 @@
 const apiKey =
-  "x9VDGwRQLeBeDWDhdcCCJauQp4a-7Wu9cGlob5XR1AGlGQms4QzqbbFhB_h-QWRdiUt6scYhM7JvKW_KN1fCGTxd9rsPq07foXz6k4hT6bNIGFZDqOfXY5KHtbFvZXYx";
-const apiUrl = "https://api.yelp.com/v3/businesses/search";
+  'YP5Bqa0p0BEWalVzak0hZ9n9zVNjvYWS4KjfjCNQlVDKGRi1kcQ7s2fnDC6nXJn398PnmVVXE_XqmZH3ewOUAGDdaXPsnmsgc1-DXdj7GmBYTeDBARjISS20TAF5ZXYx';
+const apiUrl = '/api/businesses/search';
 
 const searchBusinesses = async (searchTerms, location, sortBy) => {
   const url = `${apiUrl}?term=${searchTerms}&location=${location}&sort_by=${sortBy}`;
