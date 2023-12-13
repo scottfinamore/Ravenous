@@ -77,18 +77,16 @@ function App() {
 
   const [businesses, setBusinesses] = useState([]);
 
-  const businessesRendered = searchBusinesses(
-    searchTerm,
-    location,
-    selectedSortOption
-  );
+  const handleBusinessesRendered = async (term, loc, sort) => {
+    const businessesRendered = await searchBusinesses(term, loc, sort);
 
-  setBusinesses(businessesRendered);
+    setBusinesses(businessesRendered);
+  };
 
   return (
     <div className="App">
       <header>ravenous</header>
-      <SearchBar setBusinesses={setBusinesses} />
+      <SearchBar handleBusinessesRendered={handleBusinessesRendered} />
       <BusinessList businesses={businesses} />
     </div>
   );

@@ -9,8 +9,7 @@ const searchBarOptions = {
 };
 
 const SearchBar = (props) => {
-  console.log("props", props);
-  const { setBusinesses } = props;
+  const { handleBusinessesRendered } = props;
   const [searchTerm, setSearchTerm] = useState("");
   const [location, setLocation] = useState("");
   const [selectedSortOption, setSelectedSortOption] = useState("best_match");
@@ -46,11 +45,13 @@ const SearchBar = (props) => {
     // console.log(
     //   `Searching for ${searchTerm}, ${location}, ${selectedSortOption}`
     // );
+
     if (!searchTerm.length || !location.length) {
       alert("add values to fields");
       return;
     }
     // function handler goes here
+    handleBusinessesRendered(searchTerm, location, selectedSortOption);
   };
 
   // console.log("Selected Sort Option:", selectedSortOption);

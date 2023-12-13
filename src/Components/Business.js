@@ -3,6 +3,7 @@ import "./Business.css";
 
 const Business = (props) => {
   const { businessData } = props;
+  console.log(businessData);
 
   return (
     <li className="business">
@@ -20,7 +21,7 @@ const Business = (props) => {
           <h3 className="businessCategory">{businessData.category}</h3>
           <h3 className="businessRating">{businessData.rating} stars</h3>
           <p className="businessReviewCount">
-            {businessData.review_count} reviews
+            {businessData.reviewCount} reviews
           </p>
         </div>
       </div>

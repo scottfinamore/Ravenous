@@ -27,7 +27,7 @@ const searchBusinesses = async (searchTerms, location, sortBy) => {
       name: business.name,
       rating: business.rating,
       reviewCount: business.review_count,
-      address: business.location.address,
+      address: business.location.address1,
     }));
 
     return businesses;

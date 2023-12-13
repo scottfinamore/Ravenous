@@ -4,6 +4,7 @@ import "./BusinessList.css";
 
 const BusinessList = (props) => {
   const { businesses } = props;
+  console.log("buinesses", businesses);
 
   return (
     <div className="businessListWrapper">
