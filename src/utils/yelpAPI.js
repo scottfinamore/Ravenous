@@ -23,11 +23,16 @@ const searchBusinesses = async (searchTerms, location, sortBy) => {
     const data = await response.json();
     console.log("data", data);
     const businesses = data.businesses.map((business) => ({
+      imageURL: business.image_url,
       id: business.id,
       name: business.name,
       rating: business.rating,
       reviewCount: business.review_count,
       address: business.location.address1,
+      city: business.location.city,
+      state: business.location.state,
+      zip: business.location.zip_code,
+      category: business.categories[0].title,
     }));
 
     return businesses;

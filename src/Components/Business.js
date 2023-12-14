@@ -8,14 +8,14 @@ const Business = (props) => {
   return (
     <li className="business">
       <div className="businessImage">
-        <img src={businessData.imgSource} alt={businessData.name} />
+        <img src={businessData.imageURL} alt={businessData.name} />
       </div>
       <h2 className="businessName">{businessData.name}</h2>
       <div className="businessInfo">
         <div className="businessAddress">
           <p>{businessData.address}</p>
           <p className="businessCity">{`${businessData.city}`}</p>
-          <p className="businessStateZip">{`${businessData.state} ${businessData.zipcode}`}</p>
+          <p className="businessStateZip">{`${businessData.state} ${businessData.zip}`}</p>
         </div>
         <div className="businessDetails">
           <h3 className="businessCategory">{businessData.category}</h3>
